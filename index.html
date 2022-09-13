@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css" />
     <title>Javascript Project</title>
   </head>
-
   <body>
     <div class="container">
       <div class="navbar">
@@ -36,12 +35,15 @@
       </div>
     </div>
     <audio id="bestSong">
-      <source src="./sound/Can Koç - Gökyüzünü Tutamam Official Lyric Video.mp3"
-      type="audio/mp3/>
+      <source
+        src="./sound/Can Koç - Gökyüzünü Tutamam Official Lyric Video.mp3"
+        type="audio/mp3"
+      />
 
       <script>
-        const bestSong = document.getElementById(" bestSong");
+        const bestSong = document.getElementById("bestSong");
         const icon = document.getElementById("icon");
+
         icon.onclick = function () {
           if (bestSong.paused) {
             bestSong.play();
