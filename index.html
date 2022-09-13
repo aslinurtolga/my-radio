@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Javascript Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="./img/logo.png" class="logo" />
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SPECIFICATIONS</a></li>
+          <li><a href="#">SOUNDS</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="left-col">
+          <h1>
+            SOUND<br />
+            BODY<br />
+            SOUND<br />
+            MIND
+          </h1>
+        </div>
+        <div class="right-col">
+          <p>Click Here To Listen</p>
+          <img src="/img/play.png" id="icon" />
+        </div>
+      </div>
+    </div>
+    <audio id="bestSong">
+      <source
+        src="./sound/Can Koç - Gökyüzünü Tutamam Official Lyric Video.mp3"
+        type="audio/mp3"
+      />
+
+      <script>
+        const bestSong = document.getElementById("bestSong");
+        const icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+          if (bestSong.paused) {
+            bestSong.play();
+            icon.src = "img/pause.png";
+          } else {
+            bestSong.pause();
+            icon.src = "img/play.png";
+          }
+        };
+      </script>
+    </audio>
+  </body>
+</html>
